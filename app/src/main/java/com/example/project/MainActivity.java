@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
     private final String JSON_FILE = "mountains.json";
 
     private ArrayList<Snack> snacks;
-    private ArrayList<RecyclerViewItem> items;
+    private ArrayList<Snack> items;
     private RecyclerViewAdapter adapter;
     @SuppressLint("WrongThread")
     @Override
@@ -41,14 +41,14 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         snacks = new ArrayList<Snack>();
 
         items = new ArrayList<>(Arrays.asList(
-                new RecyclerViewItem("Matterhorn"),
-                new RecyclerViewItem("Mont Blanc"),
-                new RecyclerViewItem("Denali")
+                new Snack("Matterhorn"),
+                new Snack("Mont Blanc"),
+                new Snack("Denali")
         ));
 
         adapter = new RecyclerViewAdapter(this, items, new RecyclerViewAdapter.OnClickListener() {
             @Override
-            public void onClick(RecyclerViewItem item) {
+            public void onClick(Snack item) {
                 Toast.makeText(MainActivity.this, item.getTitle(), Toast.LENGTH_SHORT).show();
             }
         });
@@ -62,11 +62,6 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         new JsonFile(this, this).execute(JSON_FILE);
 
         //new JsonTask(this).execute(JSON_URL);
-
-
-        for (Snack snack : snacks) {
-            items.add(new RecyclerViewItem(snack.getName()));
-        }
 
         adapter.notifyDataSetChanged();
     }

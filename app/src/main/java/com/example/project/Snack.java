@@ -3,11 +3,11 @@ package com.example.project;
 import com.google.gson.annotations.SerializedName;
 
 import java.lang.ref.SoftReference;
-
+@SuppressWarnings("WeakerAccess")
 public class Snack {
 
         private String image;
-        private String name;
+        private String title;
         private char emoji;
         private String healthLvl;
         @SerializedName("cost")
@@ -19,7 +19,11 @@ public class Snack {
         private String ingredients;
         private String desc;
 
-        public String getName(){
-            return this.name;
+        public Snack(String title) {
+                this.title = title;
+        }
+
+        public String getTitle(){
+            return this.title;
         }
 }
