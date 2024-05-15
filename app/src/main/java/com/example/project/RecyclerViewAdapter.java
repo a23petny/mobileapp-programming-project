@@ -32,6 +32,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.title.setText(items.get(position).getTitle());
+        holder.emoji.setText(items.get(position).getEmoji());
+        holder.hpLvl.setText(items.get(position).getHealthLvl());
+        String tempPrice = items.get(position).getPrice() + " kr";
+        holder.price.setText(tempPrice);
     }
 
     @Override
@@ -41,11 +45,18 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView title;
+        TextView emoji;
+        TextView hpLvl;
+        TextView price;
+
 
         ViewHolder(View itemView) {
             super(itemView);
             itemView.setOnClickListener(this);
             title = itemView.findViewById(R.id.title);
+            emoji = itemView.findViewById(R.id.emoji);
+            hpLvl = itemView.findViewById(R.id.hp_lvl);
+            price = itemView.findViewById(R.id.price);
         }
 
         @Override
