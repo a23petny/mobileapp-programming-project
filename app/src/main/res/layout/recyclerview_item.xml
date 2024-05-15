@@ -13,39 +13,39 @@
         android:padding="16dp"
         android:background="#FFEBEE">
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="30sp"/>
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"/>
 
-    <TextView
-        android:id="@+id/emoji"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:layout_marginStart="0dp"/>
+        <TextView
+            android:id="@+id/emoji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginStart="0dp"/>
 
-    <TextView
-        android:id="@+id/hp_lvl"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"/>
+        <TextView
+            android:id="@+id/hp_lvl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"/>
 
-    <TextView
-        android:id="@+id/price"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:gravity="center"
-        android:layout_marginTop="8dp"/>
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_marginTop="8dp"/>
 
-    <Button
-        android:id="@+id/button_add"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ADD +"
-        android:layout_marginTop="12dp"/>
+        <Button
+            android:id="@+id/button_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ADD +"
+            android:layout_marginTop="12dp"/>
 
 
     </LinearLayout>

@@ -1,5 +1,6 @@
 package com.example.project;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -196,6 +197,11 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
             @Override
             public void onClick(Snack snack) {
                 Log.d("ASDA",""+snack.getTitle());
+                Intent intent = new Intent(MainActivity.this, in_deapth_view.class);
+                intent.putExtra("text", "Ronya Rövardotter:\nBlodet ska rinna!"); // Optional
+                intent.putExtra("number", 888); // Optional
+                startActivity(intent);
+
                 //Toast.makeText(MainActivity.this, snack.getTitle(), Toast.LENGTH_SHORT).show();
             }
         });
