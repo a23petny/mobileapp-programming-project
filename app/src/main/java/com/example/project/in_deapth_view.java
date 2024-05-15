@@ -6,7 +6,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class in_deapth_view extends Activity  {
+public class in_deapth_view extends AppCompatActivity   {
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {

@@ -198,7 +198,7 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
             public void onClick(Snack snack) {
                 Log.d("ASDA",""+snack.getTitle());
                 Intent intent = new Intent(MainActivity.this, in_deapth_view.class);
-                intent.putExtra("text", "Ronya Rövardotter:\nBlodet ska rinna!"); // Optional
+                intent.putExtra("text", snack.getTitle()); // Optional
                 intent.putExtra("number", 888); // Optional
                 startActivity(intent);
 
