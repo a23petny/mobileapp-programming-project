@@ -191,10 +191,11 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
 
         ));
 
-        Log.d("ASDA",""+snacks);
+
         adapter = new RecyclerViewAdapter(this, snacks, new RecyclerViewAdapter.OnClickListener() {
             @Override
             public void onClick(Snack snack) {
+                Log.d("ASDA",""+snack.getTitle());
                 //Toast.makeText(MainActivity.this, snack.getTitle(), Toast.LENGTH_SHORT).show();
             }
         });
