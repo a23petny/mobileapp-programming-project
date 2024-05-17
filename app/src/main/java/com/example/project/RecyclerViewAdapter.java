@@ -22,6 +22,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         this.items = items;
         this.onClickListener = onClickListener;
     }
+// grid layout
+    //flout layout
+
 
     @Override
     @NonNull
@@ -36,6 +39,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.hpLvl.setText(items.get(position).getHealthLvl());
         String tempPrice = items.get(position).getPrice() + " kr";
         holder.price.setText(tempPrice);
+        String tempEta = items.get(position).getEta() + " min";
+        holder.eta.setText(tempEta);
     }
 
     @Override
@@ -48,6 +53,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         TextView emoji;
         TextView hpLvl;
         TextView price;
+        TextView eta;
 
 
         ViewHolder(View itemView) {
@@ -57,6 +63,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             emoji = itemView.findViewById(R.id.emoji);
             hpLvl = itemView.findViewById(R.id.hp_lvl);
             price = itemView.findViewById(R.id.price);
+            eta = itemView.findViewById(R.id.eta);
         }
 
         @Override
