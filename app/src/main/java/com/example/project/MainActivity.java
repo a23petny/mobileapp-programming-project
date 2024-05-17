@@ -202,7 +202,7 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
                 intent.putExtra("image", snack.getImage());
                 intent.putExtra("emoji", snack.getEmoji());
                 intent.putExtra("location", snack.getLocation());
-                intent.putExtra("ingredients", snack.getIngredients());
+                //intent.putExtra("ingredients", snack.getIngredients());
                 intent.putExtra("desc", snack.getDesc());
                 intent.putExtra("eta", snack.getEta());
                 intent.putExtra("price", snack.getPrice());

@@ -35,7 +35,7 @@ public class in_deapth_view extends AppCompatActivity   {
                 emoji = extras.getString("emoji");
 
                 location = extras.getString("location");
-                ingredients = extras.getString("ingredients");
+                //ingredients = extras.getString("ingredients");
                 desc = extras.getString("desc");
 
                 eta = extras.getInt("eta");
@@ -43,7 +43,7 @@ public class in_deapth_view extends AppCompatActivity   {
             }
 
             TextView titleView = findViewById(R.id.title);
-            ImageView imageView = findViewById(R.id.image);
+            //ImageView imageView = findViewById(R.id.image);
             TextView emojiView = findViewById(R.id.emoji);
 
             TextView descView = findViewById(R.id.desc);
@@ -52,8 +52,12 @@ public class in_deapth_view extends AppCompatActivity   {
 
             TextView priceView = findViewById(R.id.price);
 
-            Log.d("asdadasd","sadasd");
+
             titleView.setText(title);
+            emojiView.setText(emoji);
+            priceView.setText(price+ " kr");
+            etaLocView.setText("Expected time: "+eta+" min\nLocation: "+location);
+            descView.setText(desc);
             //textView1.setText("" + price);*/
 
 

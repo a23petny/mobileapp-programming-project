@@ -6,53 +6,78 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:padding="10dp">
+
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="250sp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp"
+        android:padding="16sp"
         android:background="#FFEBEE">
 
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="30sp"/>
-
-        <TextView
-            android:id="@+id/emoji"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:layout_marginStart="0dp"/>
-
-        <TextView
-            android:id="@+id/hp_lvl"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"/>
+            android:background="#745946"
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/price"
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#215436"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/emoji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#457559"
+                android:textSize="30sp"
+                android:layout_gravity="end" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:gravity="center"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginTop="8sp"
+            android:background="#045946"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/hp_lvl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:background="#457559"/>
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:background="#215436"/>
+        </LinearLayout>
+
         <TextView
             android:id="@+id/eta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="16sp"
             android:gravity="center"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginTop="8sp"
+            android:background="#215436"/>
 
         <Button
             android:id="@+id/button_add"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="25sp"
             android:text="ADD +"
-            android:layout_marginTop="12dp"/>
+            android:layout_marginTop="8sp"
+            android:textColor="#FFFFFF"
+            android:background="#98FB98"/>
 
 
     </LinearLayout>
