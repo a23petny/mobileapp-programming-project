@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">Project</string>
-    <string name="action_external_web">External Web Page</string>
-    <string name="action_internal_web">Internal Web Page</string>
+    <string name="app_name">snacks.gott</string>
+    <string name="about_screen">target audience</string>
+    <string name="healthy_snacks">healthy snacks</string>
+    <string name="all_snacks">all snacks</string>
 
 </resources>
