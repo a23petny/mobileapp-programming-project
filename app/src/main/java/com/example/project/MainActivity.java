@@ -244,6 +244,9 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
 
         if (id == R.id.about_screen) { //target_audience
             Log.d("==>","about_screen");
+
+            Intent intent = new Intent(MainActivity.this, target_audience.class);
+            startActivity(intent);
             return true;
         }
 
