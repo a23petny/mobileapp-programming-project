@@ -5,7 +5,6 @@ import com.google.gson.annotations.SerializedName;
 @SuppressWarnings("WeakerAccess")
 public class Snack {
 
-        private String image;
         private String title;
         private String emoji;
         private String healthLvl;
@@ -13,32 +12,20 @@ public class Snack {
         private int price;
         @SerializedName("size")
         private int eta;
-
         private String location;
-        private String ingredients;
         private String desc;
 
-        public Snack(String image, String title, String emoji, String healthLvl, int price, int eta, String location, String ingredients, String desc) {
-                this.image = image;
+        public Snack(String title, String emoji, String healthLvl, int price, int eta, String location, String desc) {
                 this.title = title;
                 this.emoji = emoji;
                 this.healthLvl = healthLvl;
                 this.price = price;
                 this.eta = eta;
                 this.location = location;
-                this.ingredients = ingredients;
                 this.desc = desc;
         }
 
         // Getters and Setters for each field
-        public String getImage() {
-                return image;
-        }
-
-        public void setImage(String image) {
-                this.image = image;
-        }
-
         public String getTitle() {
                 return title;
         }
@@ -85,14 +72,6 @@ public class Snack {
 
         public void setLocation(String location) {
                 this.location = location;
-        }
-
-        public String getIngredients() {
-                return ingredients;
-        }
-
-        public void setIngredients(String ingredients) {
-                this.ingredients = ingredients;
         }
 
         public String getDesc() {

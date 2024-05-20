@@ -29,8 +29,7 @@ import java.util.List;
 @SuppressWarnings("FieldCanBeLocal")
 public class MainActivity extends AppCompatActivity implements JsonTask.JsonTaskListener {
 
-    private final String JSON_URL = "https://mobprog.webug.se/json-api?login=brom";
-    private final String JSON_FILE = "mountains.json";
+    private final String JSON_URL = "https://mobprog.webug.se/json-api?login=a23petny";
 
     private ArrayList<Snack> snacks;
     private RecyclerViewAdapter adapter;
@@ -41,161 +40,18 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        List<Snack> snacks = new ArrayList<>();
 
-
-        // Snack 1
-        Snack snack1 = new Snack(
-                "image_url_1.jpg",
-                "Popcorn",
-                "\uD83C\uDF7F",
-                "Moderate",
-                2,
-                5,
-                "Movie Theater",
-                "Popcorn kernels, butter, salt",
-                "Classic movie snack, perfect for a night out at the cinema."
-        );
-
-// Snack 2
-        Snack snack2 = new Snack(
-                "image_url_2.jpg",
-                "Nachos",
-                "\uD83E\uDDC0",
-                "Indulgent",
-                6,
-                10,
-                "Sports Bar",
-                "Tortilla chips, cheese, jalapeños, salsa, sour cream, guacamole",
-                "Loaded nachos with all your favorite toppings, great for sharing."
-        );
-
-// Snack 3
-        Snack snack3 = new Snack(
-                "image_url_3.jpg",
-                "Sushi Rolls",
-                "\uD83C\uDF63",
-                "Healthy",
-                8,
-                20,
-                "Sushi Restaurant",
-                "Rice, seaweed, fish, vegetables",
-                "Fresh sushi rolls made to order, a taste of Japan."
-        );
-
-// Snack 4
-        Snack snack4 = new Snack(
-                "image_url_4.jpg",
-                "Cupcakes",
-                "\uD83E\uDDC1",
-                "Sweet",
-                4,
-                8,
-                "Bakery",
-                "Flour, sugar, butter, eggs, frosting",
-                "Delicious cupcakes in a variety of flavors, perfect for dessert."
-        );
-
-// Snack 5
-        Snack snack5 = new Snack(
-                "image_url_5.jpg",
-                "Pretzels",
-                "\uD83E\uDD68",
-                "Moderate",
-                3,
-                7,
-                "Street Vendor",
-                "Dough, salt",
-                "Soft and salty pretzels, a classic snack for any occasion."
-        );
-
-// Snack 6
-        Snack snack6 = new Snack(
-                "image_url_6.jpg",
-                "Fruit Smoothie",
-                "\uD83C\uDF53",
-                "Healthy",
-                5,
-                10,
-                "Smoothie Bar",
-                "Assorted fruits, yogurt, honey",
-                "Refreshing fruit smoothie, perfect for a nutritious boost."
-        );
-
-// Snack 7
-        Snack snack7 = new Snack(
-                "image_url_7.jpg",
-                "Mozzarella Sticks",
-                "\uD83E\uDDC0",
-                "Indulgent",
-                7,
-                12,
-                "Italian Restaurant",
-                "Mozzarella cheese, breadcrumbs, marinara sauce",
-                "Crispy on the outside, gooey on the inside, a tasty appetizer."
-        );
-
-// Snack 8
-        Snack snack8 = new Snack(
-                "image_url_8.jpg",
-                "Fries",
-                "\uD83C\uDF5F",
-                "Moderate",
-                4,
-                9,
-                "Fast Food Joint",
-                "Potatoes, oil, salt",
-                "Golden and crispy fries, the ultimate comfort food."
-        );
-
-// Snack 9
-        Snack snack9 = new Snack(
-                "image_url_9.jpg",
-                "Brownie",
-                "\uD83C\uDF6B",
-                "Sweet",
-                3,
-                6,
-                "Café",
-                "Chocolate, flour, sugar, eggs",
-                "Rich and fudgy brownie, a chocolate lover's dream."
-        );
-
-// Snack 10
-        Snack snack10 = new Snack(
-                "image_url_10.jpg",
-                "Cheese and Crackers",
-                "\uD83E\uDDC0",
-                "Moderate",
-                6,
-                10,
-                "Gourmet Deli",
-                "Assorted cheeses, crackers",
-                "A classic combination of cheese and crackers, perfect for snacking."
-        );
-
-        snacks = new ArrayList<>(Arrays.asList(
-            snack1,
-            snack2,
-            snack3,
-            snack4,
-            snack5,
-            snack6,
-            snack7,
-            snack8,
-            snack9,
-            snack10,
-            snack1,
-            snack2,
-            snack3,
-            snack4,
-            snack5,
-            snack6,
-            snack7,
-            snack8,
-            snack9,
-            snack10
-
-        ));
+        snacks.add(new Snack("Apple Slices", "🍎", "Healthy", 3, 5, "Cafeteria", "Fresh apple slices, a perfect healthy snack."));
+        snacks.add(new Snack("Chocolate Chip Cookie", "🍪", "Indulgent", 2, 3, "Bakery", "A classic treat, crisp on the outside, chewy on the inside."));
+        snacks.add(new Snack("Granola Bar", "🍫", "Healthy", 4, 2, "Vending Machine", "A crunchy granola bar with nuts and honey."));
+        snacks.add(new Snack("Yogurt Parfait", "🍨", "Healthy", 5, 6, "Cafeteria", "Layers of creamy yogurt, granola, and fresh berries."));
+        snacks.add(new Snack("Potato Chips", "🥔", "Indulgent", 2, 1, "Vending Machine", "Crispy and salty potato chips, a perfect snack for a break."));
+        snacks.add(new Snack("Smoothie", "🥤", "Healthy", 6, 7, "Juice Bar", "A refreshing blend of fruits and yogurt, perfect for a hot day."));
+        snacks.add(new Snack("Candy Bar", "🍫", "Indulgent", 1, 2, "Vending Machine", "A sweet and satisfying candy bar to keep you going."));
+        snacks.add(new Snack("Trail Mix", "🥜", "Healthy", 4, 3, "Grocery Store", "A mix of nuts, dried fruit, and chocolate chips."));
+        snacks.add(new Snack("Cheese Sticks", "🧀", "Moderate", 3, 4, "Deli", "String cheese sticks, a good source of protein and calcium."));
+        snacks.add(new Snack("Pretzels", "🥨", "Moderate", 2, 2, "Vending Machine", "Crunchy and salty pretzels, great for snacking anytime."));
 
 
         adapter = new RecyclerViewAdapter(this, snacks, new RecyclerViewAdapter.OnClickListener() {
@@ -204,10 +60,8 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
                 Log.d("ASDA",""+snack.getTitle());
                 Intent intent = new Intent(MainActivity.this, in_deapth_view.class);
                 intent.putExtra("title", snack.getTitle());
-                intent.putExtra("image", snack.getImage());
                 intent.putExtra("emoji", snack.getEmoji());
                 intent.putExtra("location", snack.getLocation());
-                //intent.putExtra("ingredients", snack.getIngredients());
                 intent.putExtra("desc", snack.getDesc());
                 intent.putExtra("eta", snack.getEta());
                 intent.putExtra("price", snack.getPrice());
@@ -221,9 +75,9 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
 
 
 
-        new JsonFile(this, this).execute(JSON_FILE);
 
-        //new JsonTask(this).execute(JSON_URL);
+
+        new JsonTask(this).execute(JSON_URL);
 
         adapter.notifyDataSetChanged();
     }
@@ -252,11 +106,16 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
 
         if (id == R.id.healthy_snacks) {
             Log.d("==>","healthy_snacks");
+
+            adapter.notifyDataSetChanged();
             return true;
+
         }
 
         if (id == R.id.all_snacks) {
             Log.d("==>","all_snacks");
+
+            adapter.notifyDataSetChanged();
             return true;
         }
 
@@ -271,6 +130,10 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         // Unmarshall JSON -> list of objects
         Type type = new TypeToken<List<Snack>>() {
         }.getType();
+        String tempString = ""+gson.fromJson(json, type);
+        Log.d("==>",tempString);
+
+        //here filter gson.fromJson(json, type); bettween healthy and unhealthy
 
         snacks = gson.fromJson(json, type);
     }
