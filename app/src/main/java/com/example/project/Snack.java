@@ -4,15 +4,19 @@ import com.google.gson.annotations.SerializedName;
 
 @SuppressWarnings("WeakerAccess")
 public class Snack {
-
+        @SerializedName("name")
         private String title;
+        @SerializedName("company")
         private String emoji;
+        @SerializedName("category")
         private String healthLvl;
         @SerializedName("cost")
         private int price;
         @SerializedName("size")
         private int eta;
+        @SerializedName("location")
         private String location;
+        @SerializedName("auxdata")
         private String desc;
 
         public Snack(String title, String emoji, String healthLvl, int price, int eta, String location, String desc) {
