@@ -103,8 +103,8 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         if (id == R.id.healthy_snacks) {
 
             acceptableHealthlvl.clear();
-            acceptableHealthlvl.add("High");
-            acceptableHealthlvl.add("Very High");
+            acceptableHealthlvl.add("Healthy");
+            acceptableHealthlvl.add("Very Healthy");
             myPreferenceEditor.putStringSet("acceptableHealthlvl", new HashSet<>(acceptableHealthlvl));
             myPreferenceEditor.apply();
 
@@ -144,12 +144,9 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
 
         snacks.clear();
         for (Snack snack : allSnacks) {
-            if (acceptableHealthlvl.isEmpty() || acceptableHealthlvl.contains(snack.getHealthLvl())) {//"\uD83C\uDF5F"
-                //Log.d("asda",snack.getEmoji());
+            if (acceptableHealthlvl.isEmpty() || acceptableHealthlvl.contains(snack.getHealthLvl())) {
                 String baseEmoji = snack.getEmoji();
                 String emoji = StringEscapeUtils.unescapeJava(baseEmoji);
-
-                Log.d("asda",""+emoji);
                 snack.setEmoji(emoji);
                 snacks.add(snack);
             }
